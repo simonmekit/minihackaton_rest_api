@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <title>Movie Search Result</title>
+</head>
+<body>
+<!--<h2>Movie Details</h2>-->
+
+<!--<p>Title: <span th:text="${movieDetails.Title}"></span></p>-->
+<!--<p>Year: <span th:text="${movieDetails.Year}"></span></p>-->
+<!--<p>Director: <span th:text="${movieDetails.Director}"></span></p>-->
+<!--<p>Image: <img th:src="${movieDetails.image}" alt="image"></p>-->
+<!--&lt;!&ndash; Add more fields as needed &ndash;&gt;-->
+
+<div class="container mt-3">
+    <h2>Movie Details</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Director</th>
+            <th scope="col">Movie Poster</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Use Thymeleaf iteration to populate the table rows -->
+        <tr th:each="movie : ${movies}">
+            <td th:text="${movie.getId()}"></td>
+            <td th:text="${movie.getTitle()}"></td>
+            <td th:text="${movie.getYear()}"></td>
+            <td th:text="${movie.getDirector()}"></td>
+            <td ><img th:src="${movie.getPoster()}" alt="image"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
