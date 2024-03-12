@@ -19,7 +19,6 @@ public class MovieServiceImpl implements MovieService{
     private static final String OMDB_API_URL = "http://www.omdbapi.com/";
     private static final String API_KEY = "b79fdda2";
 
-
     @Autowired
     public MovieServiceImpl(MovieRepository movieRepository){
         this.movieRepository = movieRepository;

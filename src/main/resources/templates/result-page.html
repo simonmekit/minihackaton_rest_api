@@ -26,7 +26,7 @@
             <th scope="col">Year</th>
             <th scope="col">Director</th>
             <th scope="col">Movie Poster</th>
-        </tr>
+            <th scope="col">Rating</th>    </tr>
         </thead>
         <tbody>
         <!-- Use Thymeleaf iteration to populate the table rows -->
@@ -35,7 +35,13 @@
             <td th:text="${movie.getTitle()}"></td>
             <td th:text="${movie.getYear()}"></td>
             <td th:text="${movie.getDirector()}"></td>
+<!--            <td th:text="${movie.getRating()}"></td>-->
             <td ><img th:src="${movie.getPoster()}" alt="image"></td>
+<!--        <tr th:each="entry : ${movie.getRating().entrySet()}">-->
+<!--            <td th:text="${entry.key}"></td>-->
+<!--            <td>:</td>-->
+<!--            <td th:text="${entry.value}"></td>-->
+<!--        </tr>-->
         </tr>
         </tbody>
     </table>

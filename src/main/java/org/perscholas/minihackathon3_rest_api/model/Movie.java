@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 
 @Getter
@@ -31,8 +32,8 @@ public class Movie {
 
     @JsonProperty("Poster")
     private String Poster;
-//
+
 //    @JsonProperty("Ratings")
-//    private List<Rating> ratings;
+//    private Map<String, String> Rating;
 
 }
